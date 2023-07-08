@@ -1,0 +1,43 @@
+# Nmap 7.94 scan initiated Wed Jul  5 21:32:04 2023 as: nmap -sS -A -T4 -oN nmap.txt 10.10.9.96
+Warning: 10.10.9.96 giving up on port because retransmission cap hit (6).
+Nmap scan report for 10.10.9.96
+Host is up (0.18s latency).
+Not shown: 994 closed tcp ports (reset)
+PORT     STATE    SERVICE      VERSION
+21/tcp   open     ftp          vsftpd 3.0.3
+22/tcp   open     ssh          OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 ef:1f:5d:04:d4:77:95:06:60:72:ec:f0:58:f2:cc:07 (RSA)
+|   256 5e:02:d1:9a:c4:e7:43:06:62:c1:9e:25:84:8a:e7:ea (ECDSA)
+|_  256 2d:00:5c:b9:fd:a8:c8:d8:80:e3:92:4f:8b:4f:18:e2 (ED25519)
+80/tcp   open     http         Apache httpd 2.4.29 ((Ubuntu))
+|_http-server-header: Apache/2.4.29 (Ubuntu)
+3283/tcp filtered netassistant
+3659/tcp filtered apple-sasl
+8443/tcp filtered https-alt
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.94%E=4%D=7/5%OT=21%CT=1%CU=33709%PV=Y%DS=5%DC=T%G=Y%TM=64A59497
+OS:%P=x86_64-pc-linux-gnu)SEQ(SP=106%GCD=1%ISR=10A%TI=Z%CI=I%II=I%TS=A)SEQ(
+OS:SP=106%GCD=1%ISR=10A%TI=Z%CI=RD%TS=C)SEQ(SP=106%GCD=1%ISR=10C%TI=Z%TS=A)
+OS:SEQ(SP=107%GCD=1%ISR=10A%TI=Z%TS=A)SEQ(SP=107%GCD=1%ISR=10A%TI=Z%CI=RD%I
+OS:I=I%TS=A)OPS(O1=M508ST11NW6%O2=M508ST11NW6%O3=M508NNT11NW6%O4=M508ST11NW
+OS:6%O5=M508ST11NW6%O6=M508ST11)WIN(W1=68DF%W2=68DF%W3=68DF%W4=68DF%W5=68DF
+OS:%W6=68DF)ECN(R=Y%DF=Y%T=40%W=6903%O=M508NNSNW6%CC=Y%Q=)T1(R=Y%DF=Y%T=40%
+OS:S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%
+OS:RD=0%Q=)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W
+OS:=0%S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)
+OS:U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%D
+OS:FI=N%T=40%CD=S)
+
+Network Distance: 5 hops
+Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 587/tcp)
+HOP RTT       ADDRESS
+1   17.66 ms  10.17.0.1
+2   ... 4
+5   192.22 ms 10.10.9.96
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Jul  5 21:34:39 2023 -- 1 IP address (1 host up) scanned in 155.02 seconds

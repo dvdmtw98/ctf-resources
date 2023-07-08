@@ -1,0 +1,42 @@
+# Nmap 7.94 scan initiated Sat Jul  1 14:48:30 2023 as: nmap -vvv -p 80,8080 -sS -A -T4 -oN rustscan.txt 10.0.2.26
+Nmap scan report for 10.0.2.26
+Host is up, received arp-response (0.0014s latency).
+Scanned at 2023-07-01 14:48:31 IST for 31s
+
+PORT     STATE SERVICE REASON         VERSION
+80/tcp   open  http    syn-ack ttl 64 Apache httpd 2.2.21 ((FreeBSD) mod_ssl/2.2.21 OpenSSL/0.9.8q DAV/2 PHP/5.3.8)
+| http-methods: 
+|_  Supported Methods: POST
+8080/tcp open  http    syn-ack ttl 64 Apache httpd 2.2.21 ((FreeBSD) mod_ssl/2.2.21 OpenSSL/0.9.8q DAV/2 PHP/5.3.8)
+|_http-server-header: Apache/2.2.21 (FreeBSD) mod_ssl/2.2.21 OpenSSL/0.9.8q DAV/2 PHP/5.3.8
+|_http-title: 403 Forbidden
+MAC Address: 08:00:27:C5:92:76 (Oracle VirtualBox virtual NIC)
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+OS fingerprint not ideal because: Missing a closed TCP port so results incomplete
+No OS matches for host
+TCP/IP fingerprint:
+SCAN(V=7.94%E=4%D=7/1%OT=80%CT=%CU=%PV=Y%DS=1%DC=D%G=N%M=080027%TM=649FEF86%P=x86_64-pc-linux-gnu)
+SEQ(TS=22)
+SEQ(SP=108%GCD=2%ISR=10B%TI=I%TS=21)
+OPS(O1=M5B4NW6ST11%O2=M578NW6ST11%O3=M280NW6NNT11%O4=M5B4NW6ST11%O5=M218NW6ST11%O6=M109ST11)
+WIN(W1=FFFF%W2=FFFF%W3=FFFF%W4=FFFF%W5=FFFF%W6=FFFF)
+ECN(R=N)
+T1(R=Y%DF=Y%TG=40%S=O%A=S+%F=AS%RD=0%Q=)
+T2(R=N)
+T3(R=N)
+T4(R=N)
+U1(R=N)
+IE(R=N)
+
+Uptime guess: 0.000 days (since Sat Jul  1 14:48:42 2023)
+Network Distance: 1 hop
+TCP Sequence Prediction: Difficulty=264 (Good luck!)
+IP ID Sequence Generation: Incremental
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   1.40 ms 10.0.2.26
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Jul  1 14:49:02 2023 -- 1 IP address (1 host up) scanned in 31.79 seconds
