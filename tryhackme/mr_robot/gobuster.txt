@@ -1,0 +1,63 @@
+===============================================================
+Gobuster v3.6
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                     http://10.10.84.69:80/
+[+] Method:                  GET
+[+] Threads:                 10
+[+] Wordlist:                /usr/share/wordlists/dirb/common.txt
+[+] Negative Status codes:   404
+[+] User Agent:              gobuster/3.6
+[+] Timeout:                 10s
+===============================================================
+Starting gobuster in directory enumeration mode
+===============================================================
+[2K/.hta                 (Status: 403) [Size: 213]
+[2K/.htaccess            (Status: 403) [Size: 218]
+[2K/.htpasswd            (Status: 403) [Size: 218]
+[2K/0                    (Status: 301) [Size: 0] [--> http://10.10.84.69:80/0/]
+[2K/admin                (Status: 301) [Size: 233] [--> http://10.10.84.69/admin/]
+[2K/atom                 (Status: 200) [Size: 619]
+[2K/audio                (Status: 301) [Size: 233] [--> http://10.10.84.69/audio/]
+[2K/blog                 (Status: 301) [Size: 232] [--> http://10.10.84.69/blog/]
+[2K/css                  (Status: 301) [Size: 231] [--> http://10.10.84.69/css/]
+[2K/dashboard            (Status: 302) [Size: 0] [--> http://10.10.84.69:80/wp-admin/]
+[2K/favicon.ico          (Status: 200) [Size: 0]
+[2K/feed                 (Status: 200) [Size: 807]
+[2K/image                (Status: 301) [Size: 0] [--> http://10.10.84.69:80/image/]
+[2K/Image                (Status: 301) [Size: 0] [--> http://10.10.84.69:80/Image/]
+[2K/images               (Status: 301) [Size: 234] [--> http://10.10.84.69/images/]
+[2K/index.html           (Status: 200) [Size: 1077]
+[2K/index.php            (Status: 301) [Size: 0] [--> http://10.10.84.69:80/]
+[2K/intro                (Status: 200) [Size: 516314]
+[2K/js                   (Status: 301) [Size: 230] [--> http://10.10.84.69/js/]
+[2K/license              (Status: 200) [Size: 309]
+[2K/login                (Status: 302) [Size: 0] [--> http://10.10.84.69:80/wp-login.php]
+[2K/page1                (Status: 200) [Size: 8346]
+[2K/phpmyadmin           (Status: 403) [Size: 94]
+[2K/rdf                  (Status: 200) [Size: 811]
+[2K/readme               (Status: 200) [Size: 64]
+[2K/robots.txt           (Status: 200) [Size: 41]
+[2K/robots               (Status: 200) [Size: 41]
+[2K/rss                  (Status: 200) [Size: 363]
+[2K/rss2                 (Status: 200) [Size: 807]
+[2K/sitemap              (Status: 200) [Size: 0]
+[2K/sitemap.xml          (Status: 200) [Size: 0]
+[2K/video                (Status: 301) [Size: 233] [--> http://10.10.84.69/video/]
+[2K/wp-admin             (Status: 301) [Size: 236] [--> http://10.10.84.69/wp-admin/]
+[2K/wp-config            (Status: 200) [Size: 0]
+[2K/wp-content           (Status: 301) [Size: 238] [--> http://10.10.84.69/wp-content/]
+[2K/wp-cron              (Status: 200) [Size: 0]
+[2K/wp-includes          (Status: 301) [Size: 239] [--> http://10.10.84.69/wp-includes/]
+[2K/wp-links-opml        (Status: 200) [Size: 227]
+[2K/wp-load              (Status: 200) [Size: 0]
+[2K/wp-login             (Status: 200) [Size: 2620]
+[2K/wp-mail              (Status: 500) [Size: 3064]
+[2K/wp-settings          (Status: 500) [Size: 0]
+[2K/wp-signup            (Status: 302) [Size: 0] [--> http://10.10.84.69:80/wp-login.php?action=register]
+[2K/xmlrpc               (Status: 405) [Size: 42]
+[2K/xmlrpc.php           (Status: 405) [Size: 42]
+
+===============================================================
+Finished
+===============================================================

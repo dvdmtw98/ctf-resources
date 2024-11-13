@@ -1,0 +1,36 @@
+# Nmap 7.94SVN scan initiated Thu Apr 18 17:39:46 2024 as: nmap -vvv -p 80,443 -sS -Pn -sV -O -T4 -oN rustscan.txt 10.10.84.69
+Nmap scan report for 10.10.84.69
+Host is up, received user-set (0.39s latency).
+Scanned at 2024-04-18 17:39:46 CDT for 31s
+
+PORT    STATE SERVICE  REASON         VERSION
+80/tcp  open  http     syn-ack ttl 60 Apache httpd
+443/tcp open  ssl/http syn-ack ttl 60 Apache httpd
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: general purpose|specialized|storage-misc
+Running (JUST GUESSING): Linux 3.X|5.X (90%), Crestron 2-Series (86%), HP embedded (85%)
+OS CPE: cpe:/o:linux:linux_kernel:3 cpe:/o:linux:linux_kernel:5.4 cpe:/o:crestron:2_series cpe:/h:hp:p2000_g3
+OS fingerprint not ideal because: Missing a closed TCP port so results incomplete
+Aggressive OS guesses: Linux 3.10 - 3.13 (90%), Linux 5.4 (89%), Crestron XPanel control system (86%), HP P2000 G3 NAS device (85%)
+No exact OS matches for host (test conditions non-ideal).
+TCP/IP fingerprint:
+SCAN(V=7.94SVN%E=4%D=4/18%OT=80%CT=%CU=%PV=Y%G=N%TM=6621A151%P=x86_64-pc-linux-gnu)
+SEQ(SP=105%GCD=1%ISR=10A%TI=Z%II=I%TS=8)
+SEQ(SP=106%GCD=1%ISR=10A%TI=Z%II=I%TS=8)
+OPS(O1=M508ST11NW7%O2=M508ST11NW7%O3=M508NNT11NW7%O4=M508ST11NW7%O5=M508ST11NW7%O6=M508ST11)
+WIN(W1=68DF%W2=68DF%W3=68DF%W4=68DF%W5=68DF%W6=68DF)
+ECN(R=Y%DF=Y%TG=40%W=6903%O=M508NNSNW7%CC=Y%Q=)
+T1(R=Y%DF=Y%TG=40%S=O%A=S+%F=AS%RD=0%Q=)
+T2(R=N)
+T3(R=N)
+T4(R=Y%DF=Y%TG=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)
+U1(R=N)
+IE(R=Y%DFI=N%TG=40%CD=S)
+
+Uptime guess: 200.443 days (since Sun Oct  1 07:02:29 2023)
+TCP Sequence Prediction: Difficulty=262 (Good luck!)
+IP ID Sequence Generation: All zeros
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Apr 18 17:40:17 2024 -- 1 IP address (1 host up) scanned in 33.00 seconds

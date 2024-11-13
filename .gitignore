@@ -1,3 +1,11 @@
 Scripts
-**/Exploits
 **/*.ovpn
+**/*.tar.gz
+**/id_rsa
+**/exploits
+
+# THM: SeeTwo
+**/see_two/evidence.zip
+**/see_two/capture.pcap
+**/see_two/base64_client
+**/see_two/client

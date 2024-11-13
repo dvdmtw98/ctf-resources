@@ -1,0 +1,88 @@
+# Nmap 7.94SVN scan initiated Mon May 13 11:55:17 2024 as: nmap -sS -T4 -A -p- -oN nmap.txt 10.10.12.248
+Warning: 10.10.12.248 giving up on port because retransmission cap hit (6).
+Nmap scan report for 10.10.12.248
+Host is up (0.10s latency).
+Not shown: 65504 closed tcp ports (reset)
+PORT      STATE    SERVICE        VERSION
+22/tcp    open     ssh            OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 73:92:8e:04:de:40:fb:9c:90:f9:cf:42:70:c8:45:a7 (RSA)
+|   256 6d:63:d6:b8:0a:67:fd:86:f1:22:30:2b:2d:27:1e:ff (ECDSA)
+|_  256 bd:08:97:79:63:0f:80:7c:7f:e8:50:dc:59:cf:39:5e (ED25519)
+111/tcp   open     rpcbind        2-4 (RPC #100000)
+| rpcinfo: 
+|   program version    port/proto  service
+|   100000  2,3,4        111/tcp   rpcbind
+|   100000  2,3,4        111/udp   rpcbind
+|   100000  3,4          111/tcp6  rpcbind
+|   100000  3,4          111/udp6  rpcbind
+|   100003  3           2049/udp   nfs
+|   100003  3           2049/udp6  nfs
+|   100003  3,4         2049/tcp   nfs
+|   100003  3,4         2049/tcp6  nfs
+|   100005  1,2,3      36353/tcp6  mountd
+|   100005  1,2,3      38075/udp   mountd
+|   100005  1,2,3      40285/udp6  mountd
+|   100005  1,2,3      57843/tcp   mountd
+|   100021  1,3,4      34859/tcp   nlockmgr
+|   100021  1,3,4      40307/tcp6  nlockmgr
+|   100021  1,3,4      46382/udp   nlockmgr
+|   100021  1,3,4      50179/udp6  nlockmgr
+|   100227  3           2049/tcp   nfs_acl
+|   100227  3           2049/tcp6  nfs_acl
+|   100227  3           2049/udp   nfs_acl
+|_  100227  3           2049/udp6  nfs_acl
+391/tcp   filtered synotics-relay
+446/tcp   filtered ddm-rdb
+1545/tcp  filtered vistium-share
+2049/tcp  open     nfs            3-4 (RPC #100003)
+10867/tcp filtered unknown
+11037/tcp filtered unknown
+15453/tcp filtered unknown
+17523/tcp filtered unknown
+18839/tcp filtered unknown
+25993/tcp filtered unknown
+27622/tcp filtered unknown
+27745/tcp filtered unknown
+28465/tcp filtered unknown
+30592/tcp filtered unknown
+34859/tcp open     nlockmgr       1-4 (RPC #100021)
+35612/tcp filtered unknown
+39465/tcp open     mountd         1-3 (RPC #100005)
+40883/tcp filtered unknown
+41292/tcp filtered unknown
+42333/tcp open     mountd         1-3 (RPC #100005)
+48587/tcp filtered unknown
+51368/tcp filtered unknown
+51779/tcp filtered unknown
+52453/tcp filtered unknown
+55830/tcp filtered unknown
+57843/tcp open     mountd         1-3 (RPC #100005)
+59922/tcp filtered unknown
+60570/tcp filtered unknown
+60710/tcp filtered unknown
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.94SVN%E=4%D=5/13%OT=22%CT=1%CU=42500%PV=Y%DS=4%DC=T%G=Y%TM=6642
+OS:4944%P=x86_64-pc-linux-gnu)SEQ(CI=Z)SEQ(SP=106%GCD=1%ISR=10D%TI=Z%CI=Z%T
+OS:S=A)SEQ(SP=106%GCD=1%ISR=10D%TI=Z%CI=Z%II=I%TS=A)OPS(O1=M509ST11NW7%O2=M
+OS:509ST11NW7%O3=M509NNT11NW7%O4=M509ST11NW7%O5=M509ST11NW7%O6=M509ST11)WIN
+OS:(W1=F4B3%W2=F4B3%W3=F4B3%W4=F4B3%W5=F4B3%W6=F4B3)ECN(R=Y%DF=Y%T=40%W=F50
+OS:7%O=M509NNSNW7%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(
+OS:R=N)T4(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T4(R=Y%DF=Y%T=40%
+OS:W=0%S=O%A=Z%F=R%O=%RD=0%Q=)T5(R=N)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%
+OS:RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0
+OS:%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIP
+OS:CK=G%RUCK=G%RUD=G)IE(R=N)IE(R=Y%DFI=N%T=40%CD=S)
+
+Network Distance: 4 hops
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 143/tcp)
+HOP RTT       ADDRESS
+1   32.44 ms  10.6.0.1
+2   ... 3
+4   102.22 ms 10.10.12.248
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon May 13 12:09:24 2024 -- 1 IP address (1 host up) scanned in 847.34 seconds

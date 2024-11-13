@@ -1,0 +1,55 @@
+# Nmap 7.94SVN scan initiated Mon May 13 17:50:41 2024 as: nmap -sS -T4 -A -p- -oN nmap_smtp.txt 10.10.98.49
+Nmap scan report for 10.10.98.49
+Host is up (0.096s latency).
+Not shown: 65519 closed tcp ports (reset)
+PORT      STATE    SERVICE   VERSION
+22/tcp    open     ssh       OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 62:a7:03:13:39:08:5a:07:80:1a:e5:27:ee:9b:22:5d (RSA)
+|   256 89:d0:40:92:15:09:39:70:17:6e:c5:de:5b:59:ee:cb (ECDSA)
+|_  256 56:7c:d0:c4:95:2b:77:dd:53:d6:e6:73:99:24:f6:86 (ED25519)
+25/tcp    open     smtp      Postfix smtpd
+|_ssl-date: TLS randomness does not represent time
+| ssl-cert: Subject: commonName=polosmtp
+| Subject Alternative Name: DNS:polosmtp
+| Not valid before: 2020-04-22T18:38:06
+|_Not valid after:  2030-04-20T18:38:06
+|_smtp-commands: polosmtp.home, PIPELINING, SIZE 10240000, VRFY, ETRN, STARTTLS, ENHANCEDSTATUSCODES, 8BITMIME, DSN, SMTPUTF8
+3619/tcp  filtered aairnet-2
+7772/tcp  filtered unknown
+9577/tcp  filtered unknown
+21616/tcp filtered unknown
+31362/tcp filtered unknown
+35011/tcp filtered unknown
+40473/tcp filtered unknown
+47455/tcp filtered unknown
+49355/tcp filtered unknown
+51307/tcp filtered unknown
+52415/tcp filtered unknown
+59926/tcp filtered unknown
+62916/tcp filtered unknown
+63818/tcp filtered unknown
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.94SVN%E=4%D=5/13%OT=22%CT=1%CU=31584%PV=Y%DS=4%DC=T%G=Y%TM=6642
+OS:9C38%P=x86_64-pc-linux-gnu)SEQ(SP=FE%GCD=1%ISR=106%TI=Z%CI=Z%II=I%TS=A)S
+OS:EQ(SP=FF%GCD=1%ISR=106%TI=Z%CI=Z%II=I%TS=A)OPS(O1=M509ST11NW7%O2=M509ST1
+OS:1NW7%O3=M509NNT11NW7%O4=M509ST11NW7%O5=M509ST11NW7%O6=M509ST11)WIN(W1=F4
+OS:B3%W2=F4B3%W3=F4B3%W4=F4B3%W5=F4B3%W6=F4B3)ECN(R=Y%DF=Y%T=40%W=F507%O=M5
+OS:09NNSNW7%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4
+OS:(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%
+OS:F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%
+OS:T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%R
+OS:ID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)
+
+Network Distance: 4 hops
+Service Info: Host:  polosmtp.home; OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 3389/tcp)
+HOP RTT      ADDRESS
+1   24.90 ms 10.6.0.1
+2   ... 3
+4   96.21 ms 10.10.98.49
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon May 13 18:03:20 2024 -- 1 IP address (1 host up) scanned in 760.39 seconds

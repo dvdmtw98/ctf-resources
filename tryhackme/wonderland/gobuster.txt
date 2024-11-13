@@ -1,0 +1,21 @@
+===============================================================
+Gobuster v3.6
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                     http://10.10.95.75:80/
+[+] Method:                  GET
+[+] Threads:                 10
+[+] Wordlist:                /usr/share/wordlists/dirb/common.txt
+[+] Negative Status codes:   404
+[+] User Agent:              gobuster/3.6
+[+] Timeout:                 10s
+===============================================================
+Starting gobuster in directory enumeration mode
+===============================================================
+[2K/img                  (Status: 301) [Size: 0] [--> img/]
+[2K/index.html           (Status: 301) [Size: 0] [--> ./]
+[2K/r                    (Status: 301) [Size: 0] [--> r/]
+
+===============================================================
+Finished
+===============================================================

